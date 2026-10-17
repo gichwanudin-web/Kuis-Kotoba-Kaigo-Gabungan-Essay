@@ -147,7 +147,7 @@
             background: #f8f9fa;
             padding: 15px 18px;
             border-radius: 12px;
-            max-height: 400px;
+            max-height: 500px;
             overflow-y: auto;
         }
         .answer-list .section-title {
@@ -163,11 +163,11 @@
             z-index: 1;
         }
         .answer-list .item {
-            padding: 6px 0;
+            padding: 5px 0;
             border-bottom: 1px solid #eee;
-            font-size: 13px;
+            font-size: 12px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             align-items: flex-start;
         }
         .answer-list .item:last-child { border-bottom: none; }
@@ -346,7 +346,7 @@
         </div>
         
         <div class="rules" style="margin-top:15px;">
-            <li>📝 <strong>130 soal</strong> (1 sesi)</li>
+            <li>📝 <strong>280 soal</strong> (1 sesi)</li>
             <li>🇮🇩→🇯🇵 <strong>Arah:</strong> Indonesia → Jepang</li>
             <li>🔀 Soal <strong>DIACAK</strong></li>
             <li>✍️ <strong>Tulis jawaban di kertas</strong> (tanpa input)</li>
@@ -360,7 +360,7 @@
         <div class="header">
             <div class="title">📚 Kuis <span>Kaigo</span></div>
             <div class="stats">
-                <div>📌 <span class="num" id="currentNum">1</span>/<span id="totalNum">130</span></div>
+                <div>📌 <span class="num" id="currentNum">1</span>/<span id="totalNum">280</span></div>
             </div>
         </div>
         
@@ -370,7 +370,7 @@
         
         <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
         <div class="timer-container"><div class="timer" id="timerDisplay">10</div></div>
-        <div class="question-number" id="qNumber">Soal 1 dari 130</div>
+        <div class="question-number" id="qNumber">Soal 1 dari 280</div>
         <div class="session-info">✍️ Tulis bahasa Jepangnya di kertas!</div>
         
         <div class="question-text" id="questionText">
@@ -401,7 +401,7 @@
 </div>
 
 <script>
-// ===== KOSAKATA KAIGO LENGKAP (130 SOAL) =====
+// ===== KOSAKATA KAIGO LENGKAP (280 SOAL) =====
 const KOTOBA = [
     // ===== BAGIAN 1: Mobilitas & Perpindahan (26) =====
     { q: "beralih", jp: "移乗（いじょう）" },
@@ -862,7 +862,7 @@ function renderAnswerList() {
     
     const title = document.createElement('div');
     title.className = 'section-title';
-    title.textContent = '🇮🇩→🇯🇵 Kunci Jawaban: Indonesia → Jepang';
+    title.textContent = `🇮🇩→🇯🇵 Kunci Jawaban: Indonesia → Jepang (${TOTAL} soal)`;
     answerList.appendChild(title);
     
     questions.forEach((item, i) => {
